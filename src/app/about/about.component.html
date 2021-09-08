@@ -1,0 +1,23 @@
+<h1>PIPES</h1>
+<p>Pipes(|) are used to transform data</p>
+<h2>Uppercase and lower case</h2>
+<p>{{sampleText}}</p>
+<p>{{sampleText | uppercase}} </p>
+<p>{{sampleText | lowercase}}</p>
+
+<hr>
+
+<h2>Date</h2>
+<p>{{today}}</p>
+<p>{{today | date}}</p>
+
+<!-- Parameterised pipe -->
+<p>{{today | date: 'dd/MMM/yyyy @ hh:mm:ss a'}}</p>
+
+<!-- Chaining pipes -->
+<p>{{today | date | uppercase}}</p>
+
+<h3>Custom pipes</h3>
+<!-- create custom pipe using ng g p pipename. Below 5 is the argument passed to ellipsis custom pipe-->
+<!-- Refer ellipsis pipe implementation in shared/pipes-->
+<p>{{sampleText | ellipsis:5 }}</p>
